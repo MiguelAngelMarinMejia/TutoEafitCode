@@ -25,7 +25,10 @@ public class Main {
                       if (opAccion == 1) {
                           getFechasParciales(opMateria);
                       } else {
-
+                          System.out.println("Ingresa el número del tutor para ver las fechas disponibles");
+                          getListaTutores(opMateria);
+                          int opTutor = sc.nextInt();
+                          getFechasTutor(opMateria, opTutor);
                       }
                       break;
                   }
@@ -36,49 +39,4 @@ public class Main {
 
 
     }
-    /*
-    public static void mostrarDatos(int mat, int tutor){
-        if(tutor == 1 && mat == 1){
-            System.out.println("\nEl tutor Juan tiene disponibles los siguientes días:");
-        } else if(tutor == 2 && mat == 1){
-            System.out.println("\nEl tutor Pedro tiene disponibles los siguientes días:");
-        } else if(tutor == 1 && mat == 2){
-            System.out.println("\nEl tutor Arnold tiene disponibles los siguientes días:");
-        } else if(tutor == 2 && mat == 2){
-            System.out.println("\nEl tutor Gasparin tiene disponibles los siguientes días:");
-        } else if(tutor == 3 && mat == 2){
-            System.out.println("\nEl tutor Pablo tiene disponibles los siguientes días:");
-        } else if(tutor == 1 && mat == 3){
-            System.out.println("\nEl tutor Jose tiene disponibles los siguientes días:");
-        } else if(tutor == 2 && mat == 3){
-            System.out.println("\nLa tutora María tiene disponibles los siguientes días:");
-        }
-    }
-
-    public static void elegirTutor(int matEleg, Scanner s) {
-        int tutorElegido;
-        System.out.println("Elije el tutor que deseas");
-        switch (matEleg) {
-            case 1:
-                System.out.println("1. Juan");
-                System.out.println("2. Pedro");
-                tutorElegido = s.nextInt();
-                mostrarDatos(matEleg, tutorElegido);
-                break;
-            case 2:
-                System.out.println("1. Arnold");
-                System.out.println("2. Gasparin");
-                System.out.println("3. Pablo");
-                tutorElegido = s.nextInt();
-                mostrarDatos(matEleg, tutorElegido);
-                break;
-            case 3:
-                System.out.println("1. José");
-                System.out.println("2. María");
-                tutorElegido = s.nextInt();
-                mostrarDatos(matEleg, tutorElegido);
-                break;
-        }
-    }
-    */
 }
